@@ -1,0 +1,166 @@
+body {
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.nav,
+.users {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.nav__list,
+.users__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav__item {
+  margin: 30px;
+  font-size: 24px;
+  padding: 10px;
+  border: 2px solid palevioletred;
+  border-radius: 30%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav__item:hover {
+  border-color: rgb(158, 67, 98);
+  background-color: rgb(158, 67, 98);
+  transition: 0.5s;
+}
+
+.nav__item--active {
+  border-color: rgb(158, 67, 98);
+}
+
+.nav__link {
+  color: palevioletred;
+  text-decoration: none;
+}
+
+.users__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user {
+  width: 200px;
+  margin: 10px;
+  border: 2px solid palevioletred;
+  cursor: pointer;
+}
+
+.user__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.user__name {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.user-details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.user-details__wrapper {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  background-color: rgb(222, 222, 222);
+  color: rgb(19, 19, 19);
+}
+
+.user-details__table {
+  margin: 0 20px;
+}
+
+.user-details__term,
+.user-details__cell {
+  padding: 10px;
+}
+
+.button--close {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 2px solid palevioletred;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.button--close:hover {
+  border-color: rgb(158, 67, 98);
+  transition: 0.5s;
+}
+
+.button--close::before,
+.button--close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -1px;
+  height: 20px;
+  width: 2px;
+  border-radius: 50%;
+  background-color: palevioletred;
+}
+
+.button--close::before {
+  transform: rotate(45deg);
+}
+
+.button--close::after {
+  transform: rotate(-45deg);
+}
